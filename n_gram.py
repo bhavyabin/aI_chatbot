@@ -1,9 +1,11 @@
 # code courtesy of https://nlpforhackers.io/language-models/
-
+import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import reuters
 from nltk import bigrams, trigrams
 from collections import Counter, defaultdict
+
+nltk.download("reuters")
 
 # Create a placeholder for model
 model = defaultdict(lambda: defaultdict(lambda: 0))

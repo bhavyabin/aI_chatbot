@@ -1,11 +1,5 @@
-import numpy as np
-import pandas as pd
-from keras.preprocessing.sequence import pad_sequences
-from keras.models import Sequential
-from keras.layers import LSTM, Dense, GRU, Embedding
-from keras.callbacks import EarlyStopping, ModelCheckpoint
 
-from dataset import load_data
+from dataset2 import data_text
 from preprocess import text_cleaner
 from sequences import create_seq
 from sequence_encode import encode_seq
@@ -14,7 +8,7 @@ from llm import generate_model
 from load_llm import load
 from inference import generate_seq
 
-data_text = load_data()
+
 
 # preprocess the text
 data_new = text_cleaner(data_text)

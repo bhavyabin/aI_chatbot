@@ -8,7 +8,7 @@ def split(mapping, sequences):
     vocab = len(mapping)
     sequences = np.array(sequences)
     # create X and y
-    X, y = sequences[:,:-1], sequences[:,-1]
+    X, y = sequences[:, :-1], sequences[:,-1]
     # one hot encode y
     y = to_categorical(y, num_classes=vocab)
     # create train and validation sets
